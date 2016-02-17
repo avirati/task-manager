@@ -12,7 +12,6 @@
 
 angular.module('taskManagerApp')
 	.controller('ctrl.taskManager', [ '$scope', 'List', function ( $scope, List ) {
-		window.scope = $scope;
 		//Scope Variables
 		angular.extend($scope, {
 			List: List,
