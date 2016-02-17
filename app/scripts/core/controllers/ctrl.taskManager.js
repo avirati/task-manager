@@ -12,7 +12,7 @@
 
 angular.module('taskManagerApp')
 	.controller('ctrl.taskManager', [ '$scope', 'List', function ( $scope, List ) {
-
+		window.scope = $scope;
 		//Scope Variables
 		angular.extend($scope, {
 			List: List
@@ -28,6 +28,9 @@ angular.module('taskManagerApp')
 					title: '',
 					description: ''
 				})
+			},
+			deleteTask: function (list_index, task_index) {
+				List[list_index].tasks.splice(task_index, 1);
 			}
 		})
 

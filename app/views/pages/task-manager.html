@@ -7,14 +7,14 @@
             </div>
         </div>
         <div class="row card" ng-repeat="task in card.tasks">
-            <i class="remove-task material-icons" ng-click="deleteList($index)">clear</i>
+            <i class="remove-task material-icons" ng-click="deleteTask($parent.$index, $index)">clear</i>
             <div class="col s12">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" ng-model="card.title" placeholder="Task Title"/>
+                        <input type="text" ng-model="task.title" placeholder="Task Title"/>
                     </div>
                     <div class="input-field col s12">
-                        <input type="text" ng-model="card.description" placeholder="Task Description"/>
+                        <input type="text" ng-model="task.description" placeholder="Task Description"/>
                     </div>
                 </div>
             </div>

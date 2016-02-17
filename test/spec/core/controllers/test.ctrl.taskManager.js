@@ -32,27 +32,60 @@ describe("Unit: Testing Controllers", function () {
 
 		it('should check if deleteList() works', function () {
 			createController();
+
 			expect($scope.List.length).toEqual(0);
+
 			List.push({
 				name: 'List Name',
 				tasks: []
 			})
+
 			expect($scope.List.length).toEqual(1);
+
 			$scope.deleteList(0);
+
 			expect($scope.List.length).toEqual(0);
 		});
 
 		it('should check if addTask() works', function () {
 			createController();
+
 			expect($scope.List.length).toEqual(0);
+
 			List.push({
 				name: 'List Name',
 				tasks: []
 			})
+
 			expect($scope.List.length).toEqual(1);
+
 			$scope.addTask(0);
+
 			expect($scope.List.length).toEqual(1);
 			expect($scope.List[0].tasks.length).toEqual(1);
+		});
+
+		it('should check if removeTask() works', function () {
+			createController();
+
+			expect($scope.List.length).toEqual(0);
+
+			List.push({
+				name: 'List Name',
+				tasks: []
+			})
+
+			expect($scope.List.length).toEqual(1);
+
+			$scope.addTask(0);
+
+			expect($scope.List.length).toEqual(1);
+			expect($scope.List[0].tasks.length).toEqual(1);
+
+			$scope.deleteTask(0, 0);
+
+			expect($scope.List.length).toEqual(1);
+			expect($scope.List[0].tasks.length).toEqual(0);
 		});
 	});
 });
