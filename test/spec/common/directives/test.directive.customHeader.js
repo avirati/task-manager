@@ -3,12 +3,13 @@
 describe("Unit: Testing Directives", function () {
 
 	describe("Header Element:", function () {
-		var $scope, elem;
+		var $scope, elem, List;
 
 		beforeEach(module('taskManagerApp'));
 		beforeEach(module('htmlTemplates'));
 
-		beforeEach( inject( function ($compile, $rootScope) {
+		beforeEach( inject( function ($compile, $rootScope, _List_) {
+			List = _List_;
 
 			$scope = $rootScope.$new();
 
@@ -29,6 +30,11 @@ describe("Unit: Testing Directives", function () {
 
 		it('should check if addList function is present', function () {
 			expect($scope.addList).not.toEqual(undefined);
+		});
+
+		it('should check if calling addList() actually adds a list object to List service', function () {
+			$scope.addList();
+			expect(List.length).toEqual(1);
 		});
 	});
 });

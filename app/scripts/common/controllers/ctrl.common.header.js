@@ -21,7 +21,10 @@ angular.module('taskManagerApp')
 		angular.extend($scope, {
 			//Adds a list object to the lists
 			addList: function () {
-
+				List.push({
+					name: 'Enter a name for this List',
+					tasks: []
+				})
 			}
 		})
 	}]);
