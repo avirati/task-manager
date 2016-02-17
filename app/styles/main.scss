@@ -64,6 +64,23 @@ footer.page-footer {
     cursor: move;
     vertical-align: top;
 
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .group {
+      min-height: 172px;
+    }
+
+    .no-task-placeholder {
+      padding: 71px 18px;
+      text-align: center;
+      font-size: 20px;
+      background: transparent;
+      color: #aaa;
+      border: 1px dashed #aaa;;
+    }
+
     .remove-card {
       position: absolute;
       top: -12px;

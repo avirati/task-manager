@@ -24,6 +24,7 @@ angular.module('taskManagerApp')
 
 				},
 				connectWith: ".group",
+				revert: true
 			}
 		});
 

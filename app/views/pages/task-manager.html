@@ -7,6 +7,11 @@
             </div>
         </div>
         <ul ui-sortable="sortableOptions" ng-model="card.tasks" class="group">
+            <li ng-if="card.tasks.length === 0" class="row">
+                <div class="col s12">
+                    <div class="no-task-placeholder">Add some tasks to this list</div>
+                </div>
+            </li>
             <li ng-repeat="task in card.tasks" class="row card">
                 <i class="remove-task material-icons" ng-click="deleteTask($parent.$index, $index)" ng-class="{'disabled': card.tasks.length <= 1}">clear</i>
                 <div class="col s12">
