@@ -1,0 +1,29 @@
+<i class="remove-card material-icons" ng-click="deleteList($index)" ng-class="{'disabled': List.length <= 1}">clear</i>
+<div class="row">
+    <div class="input-field col s12">
+        <input type="text" ng-model="card.name" placeholder="Card Title"/>
+    </div>
+</div>
+<ul ui-sortable="sortableOptions" ng-model="card.tasks" class="group">
+    <li ng-if="card.tasks.length === 0" class="row">
+        <div class="col s12">
+            <div class="no-task-placeholder">Add some tasks to this list</div>
+        </div>
+    </li>
+    <li ng-repeat="task in card.tasks" class="row card">
+        <i class="remove-task material-icons" ng-click="deleteTask($parent.$index, $index)" ng-class="{'disabled': card.tasks.length <= 1}">clear</i>
+        <div class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" ng-model="task.title" placeholder="Task Title"/>
+                </div>
+                <div class="input-field col s12">
+                    <input type="text" ng-model="task.description" placeholder="Task Description"/>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="row">
+    <a class="btn-waves waves-effect btn-large light-blue col s12" ng-click="addTask($index)">Add Task</a>
+</div>
