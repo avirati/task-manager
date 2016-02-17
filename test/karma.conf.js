@@ -27,6 +27,7 @@ module.exports = function (config) {
 			'bower_components/angular/angular.js',
 			'bower_components/materialize/bin/materialize.js',
 			'bower_components/angular-materialize/src/angular-materialize.js',
+			'bower_components/angular-ui-router/release/angular-ui-router.js',
 			'bower_components/angular-mocks/angular-mocks.js',
 			// endbower
 			"app/scripts/core/app.js",
@@ -41,7 +42,7 @@ module.exports = function (config) {
 			//
 			//"app/scripts/common/factories/*.js",
 			//
-			//"app/scripts/common/routes/*.js",
+			"app/scripts/common/routes/*.js",
 
 			"app/scripts/core/controllers/ctrl.main.js",
 
