@@ -1,13 +1,22 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name taskManagerApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the taskManagerApp
+ * @author Avinash Verma
+ *
+ * Entry Point of the Application
+ *
+ * @example N/A
+ *
+ * @param {Scope} $scope: scope of the container
  */
+
 angular.module('taskManagerApp')
 	.controller('ctrl.main', [ '$scope', function ( $scope ) {
+
+		//Scope Variables
+		angular.extend($scope, {
+
+		});
+
 
 	}]);

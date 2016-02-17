@@ -13,6 +13,7 @@ angular.module('taskManagerApp.directives')
 	.directive('customHeader', [ function () {
 		return {
 			restrict: 'E',
-			templateUrl: 'views/common/header.html'
+			templateUrl: 'views/common/header.html',
+			controller: 'ctrl.common.header'
 		}
 	}]);
