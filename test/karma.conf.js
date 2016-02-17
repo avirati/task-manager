@@ -45,6 +45,7 @@ module.exports = function (config) {
 			"app/scripts/common/routes/*.js",
 
 			"app/scripts/core/controllers/ctrl.main.js",
+			"app/scripts/core/controllers/ctrl.taskManager.js",
 
 			"test/spec/**/*.js",
 
