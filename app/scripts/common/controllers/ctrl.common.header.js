@@ -11,7 +11,7 @@
  */
 
 angular.module('taskManagerApp')
-	.controller('ctrl.common.header', [ '$scope', function ( $scope ) {
+	.controller('ctrl.common.header', [ '$scope', 'List', function ( $scope, List ) {
 		//Scope Variables
 		angular.extend($scope, {
 

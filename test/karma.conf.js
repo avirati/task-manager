@@ -35,8 +35,8 @@ module.exports = function (config) {
 
 			"app/scripts/common/directives/*.js",
 
-			//"app/scripts/common/services/*.js",
-			//
+			"app/scripts/common/services/*.js",
+
 			//"app/scripts/common/filters/*.js",
 			//
 			//"app/scripts/common/factories/*.js",
