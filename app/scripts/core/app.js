@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('taskManagerApp.directives', []);
-angular.module('taskManagerApp.services', []);
+angular.module('taskManagerApp.services', ['ngStorage']);
 //angular.module('taskManagerApp.filters', []);
 //angular.module('taskManagerApp.factories', []);
 angular.module('taskManagerApp.routes', ['ui.router']);

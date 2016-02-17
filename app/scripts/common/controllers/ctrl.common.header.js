@@ -24,7 +24,9 @@ angular.module('taskManagerApp')
 				List.push({
 					name: '',
 					tasks: []
-				})
+				});
+				//Persist the changes
+				List.persist();
 			}
 		})
 	}]);

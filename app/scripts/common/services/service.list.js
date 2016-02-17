@@ -9,6 +9,12 @@
  * @param N/A
  */
 angular.module('taskManagerApp.services')
-	.service('List', [ function () {
-		return [];
+	.service('List', [ '$localStorage', function ($localStorage) {
+		var _list = $localStorage.list || [];
+
+		_list.constructor.prototype.persist = function () {
+			$localStorage.list = _list;
+		};
+
+		return _list;
 	}]);
