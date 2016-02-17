@@ -79,7 +79,7 @@ footer.page-footer {
       font-size: 20px;
       background: transparent;
       color: #aaa;
-      border: 1px dashed #aaa;;
+      border: 1px dashed #aaa;
     }
 
     .remove-card {
@@ -97,4 +97,8 @@ footer.page-footer {
       z-index: 100;
     }
   }
+}
+
+.non-draggable {
+  pointer-events: none;
 }

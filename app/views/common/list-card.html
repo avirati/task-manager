@@ -5,7 +5,7 @@
     </div>
 </div>
 <ul ui-sortable="sortableOptions" ng-model="card.tasks" class="group">
-    <li ng-if="card.tasks.length === 0" class="row">
+    <li ng-if="card.tasks.length === 0" class="row non-draggable">
         <div class="col s12">
             <div class="no-task-placeholder">Add some tasks to this list</div>
         </div>
