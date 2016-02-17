@@ -3,15 +3,17 @@
 describe("Unit: Testing Directives", function () {
 
 	describe("Header Element:", function () {
-		var $scope, elem, List;
+		var $scope, $localStorage, elem, List;
 
 		beforeEach(module('taskManagerApp'));
 		beforeEach(module('htmlTemplates'));
 
-		beforeEach( inject( function ($compile, $rootScope, _List_) {
+		beforeEach( inject( function ($compile, $rootScope, _List_, _$localStorage_) {
 			List = _List_;
+			$localStorage = _$localStorage_;
 
 			$scope = $rootScope.$new();
+			$localStorage.$reset();
 
 			elem = $compile('<custom-header></custom-header>')($scope);
 			$rootScope.$digest();
@@ -35,6 +37,7 @@ describe("Unit: Testing Directives", function () {
 		it('should check if calling addList() actually adds a list object to List service', function () {
 			$scope.addList();
 			expect(List.length).toEqual(1);
+			expect($localStorage.list.length).toEqual(List.length);
 		});
 	});
 });

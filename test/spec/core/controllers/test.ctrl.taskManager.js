@@ -3,15 +3,17 @@
 describe("Unit: Testing Controllers", function () {
 
 	describe("TaskManager Controller:", function () {
-		var $scope, createController, List;
+		var $scope, $localStorage, createController, List;
 
 		beforeEach(module('taskManagerApp'));
 
-		beforeEach(inject(function ($rootScope, _$controller_, _List_) {
+		beforeEach(inject(function ($rootScope, _$controller_, _List_, _$localStorage_) {
 
 			List = _List_;
+			$localStorage = _$localStorage_;
 
 			$scope = $rootScope.$new();
+			$localStorage.$reset();
 
 			createController = function() {
 				return _$controller_('ctrl.taskManager', {
@@ -45,6 +47,8 @@ describe("Unit: Testing Controllers", function () {
 			$scope.deleteList(0);
 
 			expect($scope.List.length).toEqual(0);
+
+			expect($scope.List).toEqual($localStorage.list);
 		});
 
 		it('should check if addTask() works', function () {
@@ -63,6 +67,8 @@ describe("Unit: Testing Controllers", function () {
 
 			expect($scope.List.length).toEqual(1);
 			expect($scope.List[0].tasks.length).toEqual(1);
+
+			expect($scope.List).toEqual($localStorage.list);
 		});
 
 		it('should check if removeTask() works', function () {
@@ -86,6 +92,8 @@ describe("Unit: Testing Controllers", function () {
 
 			expect($scope.List.length).toEqual(1);
 			expect($scope.List[0].tasks.length).toEqual(0);
+
+			expect($scope.List).toEqual($localStorage.list);
 		});
 	});
 });
