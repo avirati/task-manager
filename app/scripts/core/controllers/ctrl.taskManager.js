@@ -18,5 +18,17 @@ angular.module('taskManagerApp')
 			List: List
 		});
 
+		//Scope methods
+		angular.extend($scope, {
+			deleteList: function (list_index) {
+				List.splice(list_index, 1);
+			},
+			addTask: function (list_index) {
+				List[list_index].tasks.push({
+					title: '',
+					description: ''
+				})
+			}
+		})
 
 	}]);

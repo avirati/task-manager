@@ -1,0 +1,18 @@
+<div class="container-fluid cards-container" style="width:{{List.length * 310}}px">
+    <div class="card task-card" ng-repeat="card in List">
+        <i class="remove-card material-icons" ng-click="deleteList($index)">clear</i>
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" ng-model="card.name" placeholder="Card Title"/>
+            </div>
+        </div>
+        <div class="row" ng-repeat="task in card.tasks">
+            <div class="input-field col s12">
+                <input type="text" ng-model="card.name" placeholder="Card Title"/>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn-waves waves-effect btn-large light-blue col s12" ng-click="addTask($index)">Add Task</a>
+        </div>
+    </div>
+</div>

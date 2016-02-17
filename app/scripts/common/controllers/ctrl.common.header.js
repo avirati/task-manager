@@ -22,7 +22,7 @@ angular.module('taskManagerApp')
 			//Adds a list object to the lists
 			addList: function () {
 				List.push({
-					name: 'Enter a name for this List',
+					name: '',
 					tasks: []
 				})
 			}
