@@ -23,7 +23,9 @@ angular.module('taskManagerApp')
 			addList: function () {
 				List.push({
 					name: '',
-					tasks: []
+					tasks: [{
+
+					}]
 				});
 				//Persist the changes
 				List.persist();

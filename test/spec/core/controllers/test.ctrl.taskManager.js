@@ -35,18 +35,18 @@ describe("Unit: Testing Controllers", function () {
 		it('should check if deleteList() works', function () {
 			createController();
 
-			expect($scope.List.length).toEqual(0);
+			expect($scope.List.length).toEqual(1);
 
 			List.push({
 				name: 'List Name',
 				tasks: []
 			})
 
+			expect($scope.List.length).toEqual(2);
+
+			$scope.deleteList(1);
+
 			expect($scope.List.length).toEqual(1);
-
-			$scope.deleteList(0);
-
-			expect($scope.List.length).toEqual(0);
 
 			expect($scope.List).toEqual($localStorage.list);
 		});
@@ -54,19 +54,19 @@ describe("Unit: Testing Controllers", function () {
 		it('should check if addTask() works', function () {
 			createController();
 
-			expect($scope.List.length).toEqual(0);
+			expect($scope.List.length).toEqual(1);
 
 			List.push({
 				name: 'List Name',
 				tasks: []
 			})
 
-			expect($scope.List.length).toEqual(1);
+			expect($scope.List.length).toEqual(2);
 
-			$scope.addTask(0);
+			$scope.addTask(1);
 
-			expect($scope.List.length).toEqual(1);
-			expect($scope.List[0].tasks.length).toEqual(1);
+			expect($scope.List.length).toEqual(2);
+			expect($scope.List[1].tasks.length).toEqual(1);
 
 			expect($scope.List).toEqual($localStorage.list);
 		});
@@ -74,24 +74,24 @@ describe("Unit: Testing Controllers", function () {
 		it('should check if removeTask() works', function () {
 			createController();
 
-			expect($scope.List.length).toEqual(0);
+			expect($scope.List.length).toEqual(1);
 
 			List.push({
 				name: 'List Name',
 				tasks: []
 			})
 
-			expect($scope.List.length).toEqual(1);
+			expect($scope.List.length).toEqual(2);
 
-			$scope.addTask(0);
+			$scope.addTask(1);
 
-			expect($scope.List.length).toEqual(1);
+			expect($scope.List.length).toEqual(2);
 			expect($scope.List[0].tasks.length).toEqual(1);
 
-			$scope.deleteTask(0, 0);
+			$scope.deleteTask(1, 0);
 
-			expect($scope.List.length).toEqual(1);
-			expect($scope.List[0].tasks.length).toEqual(0);
+			expect($scope.List.length).toEqual(2);
+			expect($scope.List[1].tasks.length).toEqual(0);
 
 			expect($scope.List).toEqual($localStorage.list);
 		});

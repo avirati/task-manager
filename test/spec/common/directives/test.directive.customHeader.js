@@ -36,7 +36,7 @@ describe("Unit: Testing Directives", function () {
 
 		it('should check if calling addList() actually adds a list object to List service', function () {
 			$scope.addList();
-			expect(List.length).toEqual(1);
+			expect(List.length).toEqual(2);
 			expect($localStorage.list.length).toEqual(List.length);
 		});
 	});

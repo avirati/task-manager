@@ -15,10 +15,5 @@ describe("Unit: Testing Services", function () {
 		it('should contain a List Service', function () {
 			expect(List).not.toEqual(null);
 		});
-
-		it('should have an empty array', function () {
-			expect(List).toEqual([]);
-		});
-
 	});
 });
