@@ -15,7 +15,16 @@ angular.module('taskManagerApp')
 		window.scope = $scope;
 		//Scope Variables
 		angular.extend($scope, {
-			List: List
+			List: List,
+			sortableOptions: {
+				update: function(e, ui) {
+
+				},
+				receive: function(e, ui) {
+
+				},
+				connectWith: ".group",
+			}
 		});
 
 		//Scope methods

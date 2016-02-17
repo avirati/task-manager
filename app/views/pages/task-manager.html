@@ -6,19 +6,21 @@
                 <input type="text" ng-model="card.name" placeholder="Card Title"/>
             </div>
         </div>
-        <div class="row card" ng-repeat="task in card.tasks">
-            <i class="remove-task material-icons" ng-click="deleteTask($parent.$index, $index)">clear</i>
-            <div class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" ng-model="task.title" placeholder="Task Title"/>
-                    </div>
-                    <div class="input-field col s12">
-                        <input type="text" ng-model="task.description" placeholder="Task Description"/>
+        <ul ui-sortable="sortableOptions" ng-model="card.tasks" class="group">
+            <li ng-repeat="task in card.tasks" class="row card">
+                <i class="remove-task material-icons" ng-click="deleteTask($parent.$index, $index)">clear</i>
+                <div class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" ng-model="task.title" placeholder="Task Title"/>
+                        </div>
+                        <div class="input-field col s12">
+                            <input type="text" ng-model="task.description" placeholder="Task Description"/>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
         <div class="row">
             <a class="btn-waves waves-effect btn-large light-blue col s12" ng-click="addTask($index)">Add Task</a>
         </div>

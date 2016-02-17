@@ -13,5 +13,6 @@ angular.module('taskManagerApp', [
 	//'taskManagerApp.filters',
 	//'taskManagerApp.factories',
 	'taskManagerApp.routes',
-	'taskManagerApp.angular-materialize'
+	'taskManagerApp.angular-materialize',
+	'ui.sortable'
 ]);
