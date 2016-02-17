@@ -6,9 +6,17 @@
                 <input type="text" ng-model="card.name" placeholder="Card Title"/>
             </div>
         </div>
-        <div class="row" ng-repeat="task in card.tasks">
-            <div class="input-field col s12">
-                <input type="text" ng-model="card.name" placeholder="Card Title"/>
+        <div class="row card" ng-repeat="task in card.tasks">
+            <i class="remove-task material-icons" ng-click="deleteList($index)">clear</i>
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" ng-model="card.title" placeholder="Task Title"/>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" ng-model="card.description" placeholder="Task Description"/>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">

@@ -19,6 +19,7 @@ footer.page-footer {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: 100;
 
   .footer-copyright {
     text-align: center;
@@ -55,17 +56,27 @@ footer.page-footer {
   padding-top: 20px;
   .task-card {
     width: 300px;
-    min-height: 600px;
+    min-height: 100px;
     background-color: #eee;
     display: inline-block;
     margin-right: 10px;
     position: relative;
+    cursor: move;
+    vertical-align: top;
 
     .remove-card {
       position: absolute;
       top: -12px;
       right: -12px;
       cursor: pointer;
+    }
+
+    .remove-task {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      cursor: pointer;
+      z-index: 100;
     }
   }
 }
