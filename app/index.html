@@ -17,6 +17,8 @@
     <!-- endbuild -->
 </head>
 <body ng-app="taskManagerApp" ng-controller="ctrl.main">
+<custom-header></custom-header>
+<custom-footer></custom-footer>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -29,6 +31,9 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/core/app.js"></script>
+
+<script src="scripts/common/directives/directive.customHeader.js"></script>
+<script src="scripts/common/directives/directive.customFooter.js"></script>
 
 <script src="scripts/core/controllers/ctrl.main.js"></script>
 <!-- endbuild -->

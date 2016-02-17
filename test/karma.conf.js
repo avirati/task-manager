@@ -31,8 +31,8 @@ module.exports = function (config) {
 			// endbower
 			"app/scripts/core/app.js",
 
-			//"app/scripts/common/directives/*.js",
-			//
+			"app/scripts/common/directives/*.js",
+
 			//"app/scripts/common/services/*.js",
 			//
 			//"app/scripts/common/filters/*.js",
