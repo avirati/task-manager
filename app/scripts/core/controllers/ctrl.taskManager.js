@@ -11,11 +11,11 @@
  */
 
 angular.module('taskManagerApp')
-	.controller('ctrl.taskManager', [ '$scope', function ( $scope ) {
+	.controller('ctrl.taskManager', [ '$scope', 'List', function ( $scope, List ) {
 
 		//Scope Variables
 		angular.extend($scope, {
-
+			List: List
 		});
 
 
