@@ -3,6 +3,8 @@
 Task Manager is a trello like app, which lets one maintain lists having multiple tasks.
 [Demo]
 
+![alt tag](https://raw.githubusercontent.com/avirati/task-manager/master/app/images/screen.png)
+
 ### Tech
 
 Task Manager uses a number of open source projects to work properly:
